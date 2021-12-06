@@ -27,11 +27,11 @@
         <div class="row">
             <div class="col-md-6">
                 <h2>
-                    ¿Qué es TuPro?
+                    ¿Qué es ORTPro?
                 </h2>
                 <h3>Profesionales y expertos online</h3>
                 <p align="justify">
-                    <b>TuPro</b> es una plataforma que te conecta con los mejores profesionales y servicios de tu ciudad. Te invitamos a aumentar tu visibilidad y crecer tu negocio ¡Publica tu perfil y ofrece tus servicios!
+                    <b>ORTPro</b> es una plataforma que te conecta con los mejores profesionales y servicios de tu ciudad. Te invitamos a aumentar tu visibilidad y crecer tu negocio ¡Publica tu perfil y ofrece tus servicios!
                 </p>
             </div>
         </div>
@@ -55,7 +55,7 @@
                         <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre">
                     </div>
                     <div class="form-group mb-2">
-                        <select class="custom-select mr-sm-2" name="servicio" id="servicio">
+                        <select class="form-control" name="servicio" id="servicio">
                             <option disable selected>Servicio</option>
                             @{
                                 var i = 0;
@@ -68,7 +68,7 @@
                         </select>
                     </div>
                     <div class="form-group mb-2">
-                        <select class="custom-select mr-sm-2" name="barrio" id="barrio">
+                        <select class="form-control" name="barrio" id="barrio">
                             <option disable selected>Barrio</option>
                             @{
                                 var j = 0;
@@ -81,7 +81,7 @@
                         </select>
                     </div>
                     <div class="form-group mb-2">
-                        <select class="custom-select mr-sm-2" name="puntuacion" id="puntuacion">
+                        <select class="form-control" name="puntuacion" id="puntuacion">
                             <option disable selected>Puntuación</option>
                             @{
                                 var l = 0;
@@ -102,14 +102,13 @@
 <!--Fin-S1-->
 <!--S2-->
 <section class="sectionOptionsHome">
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <h5>
-                    Con TuPro es rapido y sencillo
+                    Con ORTPro es rapido y sencillo
                 </h5>
-            </div>
-            <div class="col-12">
+            </div>             
                 <div class="col-md-4" align="center">
                     <img src="https://tupro.com/images/reputacion.png" alt="">
                     <h4>
@@ -127,11 +126,11 @@
                     <h4>
                         Sin intermediarios
                     </h4>
-                </div>
-            </div>
+                </div>            
         </div>
     </div>
 </section>
+
 
 <section class="sectionFooterHome">
     <div class="container">
@@ -147,11 +146,11 @@
                             <div class="col-4">
                                 <img src="https://tupro.com/images/ben2.png">
                             </div>
-
-                            <p>
-                                Perfil de tu negocio
-                            </p>
-
+                            <div class="col-8">
+                                <p>
+                                    Perfil de tu negocio
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -214,55 +213,101 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </div>
 </section>
+<section class="contactanos">
+    <form action="/" method="post">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="bg-secondary text-white text-center py-2">
+                        <h3><i class="fa fa-envelope"></i>CONTACTANOS</h3>
+                    </div>
+                    <div class="form-group mt-1">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa fa-user text-secondary"></i></div>
+                            </div>
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa fa-envelope text-secondary"></i></div>
+                            </div>
+                            <input type="email" class="form-control" id="nombre" name="email" placeholder="ejemplo@gmail.com" required>
+                        </div>
+                    </div>
 
-@section scripts{
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+                    <div class="form-group">
+                        <div class="input-group mb-2">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text"><i class="fa fa-comment text-secondary"></i></div>
+                            </div>
+                            <textarea class="form-control" placeholder="Envianos tu Mensaje" required></textarea>
+                        </div>
+                    </div>
 
-    <script>
-        let app = new Vue({
-            el: '#app',
-            data: {
-            },
-            methods: {
+                    <div class="text-center">
+                        <input type="submit" value="Enviar" class="btn btn-secondary btn-block rounded-0 py-2">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</section>
+
+
+
+    @section scripts{
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+        <script>
+            let app = new Vue({
+                el: '#app',
+                data: {
+                },
+                methods: {
+                }
+            })
+        </script>
+    }
+
+
+    <style>
+        header.masthead {
+            position: relative;
+            background-color: #343a40;
+            background: url("https://policyoptions.irpp.org/wp-content/uploads/sites/2/2019/03/WordPress-Image-1.jpg") no-repeat center center;
+            background-size: cover;
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+        }
+
+            header.masthead:before {
+                content: "";
+                position: absolute;
+                background-color: #1c375e;
+                height: 100%;
+                width: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0.5;
             }
-        })
-    </script>
-}
 
 
-<style>
-    header.masthead {
-        position: relative;
-        background-color: #343a40;
-        background: url("https://policyoptions.irpp.org/wp-content/uploads/sites/2/2019/03/WordPress-Image-1.jpg") no-repeat center center;
-        background-size: cover;
-        padding-top: 8rem;
-        padding-bottom: 8rem;
-    }
-
-        header.masthead:before {
-            content: "";
-            position: absolute;
-            background-color: #1c375e;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            opacity: 0.5;
+        .formulario {
+            display: flex;
+            justify-content: center;
         }
 
-
-    .formulario {
-        display: flex;
-        justify-content: center;
-    }
-
-        .formulario div {
-            padding: 0 10px;
-        }
-</style>
+            .formulario div {
+                padding: 0 10px;
+            }
+    </style>

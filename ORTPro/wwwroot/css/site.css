@@ -1,6 +1,17 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+
+
+#imgBarra{
+    width: 80px;
+    
 }
+span{
+    font-size: 30px;
+    padding: 0 10px;
+}
+
+
 /*-------------narbarprueba--------------*/
 
 
@@ -204,8 +215,10 @@ _______________________________________*/
         margin-top: 10px;
         font-weight: bold;
     }
-
-.sectionFooterHome {
+.sectionOptionsHome img{
+    width:200px;
+}
+    .sectionFooterHome {
     background: #FFFFFF;
     padding: 20px 0;
     margin: 10px 0 50px;
@@ -226,6 +239,7 @@ _______________________________________*/
         font-size: 20px;
         margin-top: 25px;
         color: #737372;
+        margin-bottom: 1rem;
     }
 
     .sectionFooterHome img {
@@ -233,6 +247,10 @@ _______________________________________*/
         height: 100px
        
     }
+.cont-display2 {
+    display: flex;
+    flex-wrap: wrap
+}
 
 section {
     position: relative;
@@ -293,14 +311,17 @@ section {
         display: block;
         max-width: 300px;
     }
-
-
+.contactanos{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
-
-
 .border-top {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Profesional>
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Buscar Profesionales";
 }
 
 @section Scripts {
@@ -45,7 +45,7 @@
                     </div>
 
                     <div class="form-group mb-2">
-                        <select class="custom-select mr-sm-2" name="servicio" id="servicio">
+                        <select class="form-control" name="servicio" id="servicio">
                             <option disable selected>Servicio</option>
                             @{
                                 var i = 0;
@@ -59,7 +59,7 @@
                     </div>
 
                     <div class="form-group mb-2">
-                        <select class="custom-select mr-sm-2" name="barrio" id="barrio">
+                        <select class="form-control" name="barrio" id="barrio">
                             <option disable selected>Barrio</option>
                             @{
                                 var j = 0;
@@ -74,7 +74,7 @@
 
 
                     <div class="form-group mb-2">
-                        <select class="custom-select mr-sm-2" name="puntuacion" id="puntuacion">
+                        <select class="form-control" name="puntuacion" id="puntuacion">
                             <option disable selected>Puntuación</option>
                             @{
                                 var l = 0;
@@ -167,7 +167,7 @@
             border-radius: 15px 15px 0 0;
             margin: 0 auto;
             padding: 30px 30px 0 30px;
-            background-color: #3f43fd;
+            background-color: #EF6970;
             overflow: hidden;
         }
 
@@ -227,7 +227,7 @@
                 z-index: 1;
                 width: 50px;
                 height: 3px;
-                background-color: #3f43fd;
+                background-color: #f92732;
                 content: "";
                 top: 12px;
                 right: 30px;
@@ -248,7 +248,7 @@
 
         .single_advisor_profile:hover .advisor_thumb::after,
         .single_advisor_profile:focus .advisor_thumb::after {
-            background-color: #070a57;
+            background-color: #f92732;
         }
 
         .single_advisor_profile:hover .advisor_thumb .social-info a,
@@ -265,7 +265,7 @@
 
         .single_advisor_profile:hover .single_advisor_details_info,
         .single_advisor_profile:focus .single_advisor_details_info {
-            background-color: #070a57;
+            background-color: #f92732;
         }
 
             .single_advisor_profile:hover .single_advisor_details_info::after,
