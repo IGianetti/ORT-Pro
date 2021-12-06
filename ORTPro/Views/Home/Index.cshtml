@@ -1,0 +1,268 @@
+﻿@{
+    ViewData["Title"] = "ORT-Pro";
+}
+@model ORTPro.Models.Servicio
+
+<div id="app">
+    <div class="hello">
+        <header class="masthead">
+            <div class="container-fluid position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <div class="text-center text-white">
+                            <h1 class="mb-1">Bienvenido a ORTPro!</h1>
+                            <h4 class="mb-5">Conectamos necesidades con soluciones</h4>
+                            <p>
+                                Encontrá un profesional de manera rápida, confiable y segura
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+</div>
+<section class="sectionInfoHome">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>
+                    ¿Qué es TuPro?
+                </h2>
+                <h3>Profesionales y expertos online</h3>
+                <p align="justify">
+                    <b>TuPro</b> es una plataforma que te conecta con los mejores profesionales y servicios de tu ciudad. Te invitamos a aumentar tu visibilidad y crecer tu negocio ¡Publica tu perfil y ofrece tus servicios!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>
+                ¿Qué estás buscando?
+            </h2>
+            <p align="justify">
+                ¡Haz click en Buscar! ¡La solucion a tus problemas puede estar al alcance de tu mano!
+            </p>
+        </div>
+        <div class="col-md-12 margin-top-40 hiddenDesktop" align="center">
+            <form id="buscador" action="/Profesionales/Buscador" method="get">
+
+                <div class="formulario">
+                    <div class="form-group mb-2">
+                        <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Nombre">
+                    </div>
+                    <div class="form-group mb-2">
+                        <select class="custom-select mr-sm-2" name="servicio" id="servicio">
+                            <option disable selected>Servicio</option>
+                            @{
+                                var i = 0;
+                                @foreach (Servicio item in Enum.GetValues(typeof(Servicio)))
+                                {
+                                    i++;
+                                    <option value="@i">@item</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group mb-2">
+                        <select class="custom-select mr-sm-2" name="barrio" id="barrio">
+                            <option disable selected>Barrio</option>
+                            @{
+                                var j = 0;
+                                @foreach (Barrio item in Enum.GetValues(typeof(Barrio)))
+                                {
+                                    j++;
+                                    <option value="@j">@item</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group mb-2">
+                        <select class="custom-select mr-sm-2" name="puntuacion" id="puntuacion">
+                            <option disable selected>Puntuación</option>
+                            @{
+                                var l = 0;
+                                @foreach (Puntuacion item in Enum.GetValues(typeof(Puntuacion)))
+                                {
+                                    l++;
+                                    <option value="@l">@item</option>
+                                }
+                            }
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-register">BUSCAR AHORA</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!--Fin-S1-->
+<!--S2-->
+<section class="sectionOptionsHome">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h5>
+                    Con TuPro es rapido y sencillo
+                </h5>
+            </div>
+            <div class="col-12">
+                <div class="col-md-4" align="center">
+                    <img src="https://tupro.com/images/reputacion.png" alt="">
+                    <h4>
+                        Profesionales calificados
+                    </h4>
+                </div>
+                <div class="col-md-4" align="center">
+                    <img src="https://tupro.com/images/cotizaciones.png" alt="">
+                    <h4>
+                        Variedad de ofertas
+                    </h4>
+                </div>
+                <div class="col-md-4" align="center">
+                    <img src="https://tupro.com/images/solicita.png" alt="">
+                    <h4>
+                        Sin intermediarios
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sectionFooterHome">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" align="center">
+                <h5>
+                    Únete como proveedor y obtén beneficios
+                </h5>
+
+                <div class="cont-display2" style="margin-top: 50px">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="https://tupro.com/images/ben2.png">
+                            </div>
+
+                            <p>
+                                Perfil de tu negocio
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="https://tupro.com/images/ben1.png">
+                            </div>
+                            <div class="col-8">
+                                <p>
+                                    Sin de comisiones
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="https://tupro.com/images/ben5.png">
+                            </div>
+                            <div class="col-8">
+                                <p>
+                                    Incrementa la visibilidad de tu negocio
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="https://tupro.com/images/ben6.png">
+                            </div>
+                            <div class="col-8">
+                                <p>
+                                    Encuentra trabajos disponibles
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="https://tupro.com/images/ben3.png">
+                            </div>
+                            <div class="col-8">
+                                <p>
+                                    Consolida tu reputación en línea
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="https://tupro.com/images/ben4.png">
+                            </div>
+                            <div class="col-8">
+                                <p>
+                                    Maneja tu tiempo y haz lo que te gusta
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section scripts{
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+            },
+            methods: {
+            }
+        })
+    </script>
+}
+
+
+<style>
+    header.masthead {
+        position: relative;
+        background-color: #343a40;
+        background: url("https://policyoptions.irpp.org/wp-content/uploads/sites/2/2019/03/WordPress-Image-1.jpg") no-repeat center center;
+        background-size: cover;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+
+        header.masthead:before {
+            content: "";
+            position: absolute;
+            background-color: #1c375e;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0.5;
+        }
+
+
+    .formulario {
+        display: flex;
+        justify-content: center;
+    }
+
+        .formulario div {
+            padding: 0 10px;
+        }
+</style>

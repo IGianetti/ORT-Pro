@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ORTPro</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+   
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img class="imagen" src="/img/logo.png" alt="Logo" /></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Profesionales" asp-action="Index">Administrador</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Profesionales" asp-action="Buscador">Búsqueda</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--prueba-->
+        
+        <!--puebafin-->
+    </header>
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <img src="/img/logo2.png" class="logo2" />
+                    <p class="text-justify">
+                        ORTPro - Conectamos necesidades con soluciones.
+                    </p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Producto</h6>
+                    <ul class="footer-links">
+                        <li>
+                            <a>Política de privacidad</a>
+                        </li>
+                        <li>
+                            <a>Términos y condiciones</a>
+                        </li>
+                        <li>
+                            <a>Política de devolución</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Nosotros</h6>
+                    <ul class="footer-links">
+                        <li><a>Equipo</a></li>
+                        <li><a>Contacto</a></li>
+                        <li>
+                            <a>Nuestra historia</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">
+                        Copyright &copy; 2021. Todos los derechos reservados por Grupo 9.
+                    </p>
+                </div>
+
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                        <li>
+                            <a class="github" href="https://github.com/gabrielpaoli/ORTPro">
+                                <i class="fa fa-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a class="instagram" href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+
